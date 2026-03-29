@@ -24,21 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
-}
-
-/* Logo prend tout l'espace à gauche */
-.navbar__inner > .navbar__logo {
-  flex: 1;
-  display: flex;
-  justify-content: flex-start;
-}
-
-/* Bouton CTA prend tout l'espace à droite */
-.navbar__inner > .navbar__cta {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
+  gap: 24px;
 }
 
 /* Logo */

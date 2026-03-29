@@ -64,7 +64,6 @@ export default function Footer() {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p>© {currentYear} OVA Service Plus. Tous droits réservés.</p>
-          <p>Développé par <span className="footer__dev">Antygravity</span></p>
         </div>
       </div>
     </footer>

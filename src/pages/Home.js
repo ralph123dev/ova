@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import ScrollReveal from '../components/ScrollReveal';
 import './Home.css';
 
 const services = [
@@ -13,7 +14,7 @@ const services = [
   {
     icon: '🤝',
     title: 'Accompagnement',
-    desc: 'Un suivi personnalisé à chaque étape du développement de votre projet : montage, conseil réglementaire et appui opérationnel.',
+    desc: "Un suivi personnalisé à chaque étape du développement de votre projet : montage, conseil réglementaire et appui opérationnel.",
     link: '/services/accompagnement',
     color: 'orange',
   },
@@ -44,7 +45,7 @@ export default function Home() {
   const statsRef = useRef(null);
 
   useEffect(() => {
-    document.title = 'OVA Service Plus — Formation, Accompagnement & Études d\'impact';
+    document.title = "OVA Service Plus — Formation, Accompagnement & Études d'impact";
   }, []);
 
   return (
@@ -104,10 +105,12 @@ export default function Home() {
       <section className="home-stats" ref={statsRef} aria-label="Chiffres clés">
         <div className="container home-stats__grid">
           {stats.map((s, i) => (
-            <div className="home-stats__item" key={i}>
-              <div className="home-stats__number">{s.number}</div>
-              <div className="home-stats__label">{s.label}</div>
-            </div>
+            <ScrollReveal key={i} direction="up" delay={i * 100}>
+              <div className="home-stats__item">
+                <div className="home-stats__number">{s.number}</div>
+                <div className="home-stats__label">{s.label}</div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -115,23 +118,27 @@ export default function Home() {
       {/* ===================== SERVICES ===================== */}
       <section className="section" aria-labelledby="services-heading">
         <div className="container">
-          <div className="text-center">
-            <h2 className="section-title" id="services-heading">Nos Expertises</h2>
-            <div className="accent-line-center" />
-            <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Trois domaines d'excellence pour accompagner vos projets de développement durable, de A à Z.
-            </p>
-          </div>
+          <ScrollReveal direction="up">
+            <div className="text-center">
+              <h2 className="section-title" id="services-heading">Nos Expertises</h2>
+              <div className="accent-line-center" />
+              <p className="section-subtitle" style={{ margin: '0 auto' }}>
+                Trois domaines d'excellence pour accompagner vos projets de développement durable, de A à Z.
+              </p>
+            </div>
+          </ScrollReveal>
           <div className="home-services__grid">
             {services.map((s, i) => (
-              <div className={`home-service-card home-service-card--${s.color}`} key={i}>
-                <div className="home-service-card__icon">{s.icon}</div>
-                <h3 className="home-service-card__title">{s.title}</h3>
-                <p className="home-service-card__desc">{s.desc}</p>
-                <Link to={s.link} className="home-service-card__link" id={`service-link-${i}`}>
-                  En savoir plus <span>→</span>
-                </Link>
-              </div>
+              <ScrollReveal key={i} direction="up" delay={i * 150}>
+                <div className={`home-service-card home-service-card--${s.color}`}>
+                  <div className="home-service-card__icon">{s.icon}</div>
+                  <h3 className="home-service-card__title">{s.title}</h3>
+                  <p className="home-service-card__desc">{s.desc}</p>
+                  <Link to={s.link} className="home-service-card__link" id={`service-link-${i}`}>
+                    En savoir plus <span>→</span>
+                  </Link>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -141,25 +148,29 @@ export default function Home() {
       <section className="section section-alt" aria-labelledby="values-heading">
         <div className="container">
           <div className="home-why__layout">
-            <div className="home-why__left">
-              <h2 className="section-title" id="values-heading">Pourquoi choisir OVA Service Plus ?</h2>
-              <div className="accent-line" />
-              <p className="section-subtitle">
-                Nous combinons expertise locale et standards internationaux pour offrir des solutions concrètes, durables et adaptées à votre réalité.
-              </p>
-              <Link to="/a-propos" className="btn btn-outline" id="why-cta" style={{ marginTop: '24px' }}>
-                Notre histoire
-              </Link>
-            </div>
+            <ScrollReveal direction="left">
+              <div className="home-why__left">
+                <h2 className="section-title" id="values-heading">Pourquoi choisir OVA Service Plus ?</h2>
+                <div className="accent-line" />
+                <p className="section-subtitle">
+                  Nous combinons expertise locale et standards internationaux pour offrir des solutions concrètes, durables et adaptées à votre réalité.
+                </p>
+                <Link to="/a-propos" className="btn btn-outline" id="why-cta" style={{ marginTop: '24px' }}>
+                  Notre histoire
+                </Link>
+              </div>
+            </ScrollReveal>
             <div className="home-why__right">
               {values.map((v, i) => (
-                <div className="home-value-card" key={i}>
-                  <div className="home-value-card__icon">{v.icon}</div>
-                  <div>
-                    <h3 className="home-value-card__title">{v.title}</h3>
-                    <p className="home-value-card__desc">{v.desc}</p>
+                <ScrollReveal key={i} direction="right" delay={i * 120}>
+                  <div className="home-value-card">
+                    <div className="home-value-card__icon">{v.icon}</div>
+                    <div>
+                      <h3 className="home-value-card__title">{v.title}</h3>
+                      <p className="home-value-card__desc">{v.desc}</p>
+                    </div>
                   </div>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -167,22 +178,24 @@ export default function Home() {
       </section>
 
       {/* ===================== CTA BANNER ===================== */}
-      <section className="home-cta-banner" aria-label="Appel à l'action">
-        <div className="container home-cta-banner__inner">
-          <div>
-            <h2>Prêt à démarrer votre projet ?</h2>
-            <p>Contactez-nous dès aujourd'hui pour une consultation gratuite.</p>
+      <ScrollReveal direction="fade">
+        <section className="home-cta-banner" aria-label="Appel à l'action">
+          <div className="container home-cta-banner__inner">
+            <div>
+              <h2>Prêt à démarrer votre projet ?</h2>
+              <p>Contactez-nous dès aujourd'hui pour une consultation gratuite.</p>
+            </div>
+            <div className="home-cta-banner__actions">
+              <Link to="/contact" className="btn btn-primary" id="banner-cta">
+                Nous contacter
+              </Link>
+              <Link to="/realisations" className="btn btn-secondary" id="banner-realisations">
+                Voir nos réalisations
+              </Link>
+            </div>
           </div>
-          <div className="home-cta-banner__actions">
-            <Link to="/contact" className="btn btn-primary" id="banner-cta">
-              Nous contacter
-            </Link>
-            <Link to="/realisations" className="btn btn-secondary" id="banner-realisations">
-              Voir nos réalisations
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      </ScrollReveal>
     </div>
   );
 }

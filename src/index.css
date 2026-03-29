@@ -264,9 +264,6 @@ h1, h2, h3, h4, h5 {
   box-shadow: var(--shadow-lg);
 }
 
-/* ===========================
-   RESPONSIVE
-   =========================== */
 @media (max-width: 768px) {
   .section {
     padding: 60px 0;
@@ -276,5 +273,37 @@ h1, h2, h3, h4, h5 {
 @media (max-width: 480px) {
   .section {
     padding: 48px 0;
+  }
+}
+
+/* ===========================
+   SCROLL REVEAL ANIMATIONS
+   =========================== */
+
+/* État initial — caché avant d'entrer dans le viewport */
+.sr-reveal {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Directions de départ */
+.sr-from-up    { transform: translateY(48px); }
+.sr-from-left  { transform: translateX(-60px); }
+.sr-from-right { transform: translateX(60px); }
+.sr-from-fade  { transform: none; }
+
+/* État visible — déclenché par IntersectionObserver */
+.sr-reveal.sr-visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Respect des préférences d'accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .sr-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
