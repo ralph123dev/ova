@@ -1,0 +1,246 @@
+================================================================================
+                        OVA SERVICE PLUS
+          CAHIER DES CHARGES — CRÉATION DU SITE WEB OFFICIEL
+              Document confidentiel destiné à Antygravity
+================================================================================
+
+  Client         : OVA Service Plus
+  Prestataire    : Antygravity
+  Type de projet : Site web vitrine institutionnel
+  Version        : 1.0 — Document initial
+  Contact        : info@ovaserviceplus.com
+
+================================================================================
+1. PRÉSENTATION DE L'ENTREPRISE
+================================================================================
+
+OVA Service Plus est une entreprise spécialisée dans l'accompagnement des
+entreprises et des particuliers à travers des services de formation, de conseil
+et de réalisation d'études d'impact environnemental.
+
+Notre mission est d'aider nos clients à développer des projets durables,
+conformes aux exigences environnementales et pleinement adaptés aux réalités
+locales. Nous intervenons auprès d'entreprises privées, d'organisations
+publiques et de porteurs de projets individuels.
+
+================================================================================
+2. OBJECTIFS DU PROJET
+================================================================================
+
+Le site web d'OVA Service Plus doit remplir les objectifs stratégiques suivants :
+
+  • Présenter l'entreprise, ses valeurs et son positionnement de manière
+    professionnelle et crédible.
+  • Décrire clairement l'ensemble des services proposés (formations,
+    accompagnement, études d'impact).
+  • Générer des prises de contact qualifiées via un formulaire de demande
+    et les coordonnées directes.
+  • Asseoir la notoriété de la marque OVA Service Plus auprès des entreprises
+    et institutions locales.
+  • Offrir une expérience utilisateur fluide, accessible sur mobile,
+    tablette et ordinateur.
+
+================================================================================
+3. SERVICES À PRÉSENTER SUR LE SITE
+================================================================================
+
+------------------------------------------------------------------------
+3.1 Formations
+------------------------------------------------------------------------
+
+OVA Service Plus propose des programmes de formation adaptés aux
+professionnels et aux organisations :
+
+  • Formation en environnement et développement durable
+  • Gestion de projet et management
+  • Sensibilisation écologique pour entreprises et communautés
+
+------------------------------------------------------------------------
+3.2 Accompagnement
+------------------------------------------------------------------------
+
+Un accompagnement personnalisé est offert à chaque étape du développement
+de projet :
+
+  • Montage et structuration de projets
+  • Conseil administratif et réglementaire
+  • Appui opérationnel aux entreprises
+
+------------------------------------------------------------------------
+3.3 Études d'impact environnemental
+------------------------------------------------------------------------
+
+OVA Service Plus réalise des études complètes conformes aux normes en vigueur :
+
+  • Étude d'Impact Environnemental (EIE)
+  • Audit environnemental
+  • Suivi de conformité et accompagnement post-étude
+
+================================================================================
+4. CONTENU ET STRUCTURE DU SITE
+================================================================================
+
+Le site devra comporter les pages et sections suivantes :
+
+  +------------------------------------------+-----------+-----------+
+  | Page / Section                           | Priorité  | Statut    |
+  +------------------------------------------+-----------+-----------+
+  | Accueil (Home)                           | Haute     | À définir |
+  | À propos / Présentation                  | Haute     | À définir |
+  | Nos Services — Formations                | Haute     | À définir |
+  | Nos Services — Accompagnement            | Haute     | À définir |
+  | Nos Services — Études d'impact           | Haute     | À définir |
+  | Réalisations / Références                | Moyenne   | À définir |
+  | Contact                                  | Haute     | À définir |
+  | Mentions légales / Politique vie privée  | Basse     | À définir |
+  +------------------------------------------+-----------+-----------+
+
+================================================================================
+5. CHARTE GRAPHIQUE
+================================================================================
+
+La charte graphique du site web doit respecter scrupuleusement l'identité
+visuelle d'OVA Service Plus telle que définie par son logo officiel.
+
+------------------------------------------------------------------------
+5.1 Couleurs officielles
+------------------------------------------------------------------------
+
+  +----------------------------+------------+
+  | Couleur                    | Code HEX   |
+  +----------------------------+------------+
+  | Bleu foncé (couleur OVA)   | #1A3A6B    |
+  | Orange (accent PLUS)       | #E87722    |
+  | Gris (textes SERVICE)      | #6B6B6B    |
+  | Bleu ciel (swoosh bas)     | #2E7FC1    |
+  | Blanc (fond principal)     | #FFFFFF    |
+  +----------------------------+------------+
+
+------------------------------------------------------------------------
+5.2 Règles d'utilisation des couleurs
+------------------------------------------------------------------------
+
+  • Bleu foncé (#1A3A6B) : couleur principale — en-têtes, fonds de sections
+    institutionnelles, textes forts.
+  • Orange (#E87722) : couleur d'accent — boutons d'action (CTA),
+    mises en valeur, titres secondaires.
+  • Bleu ciel (#2E7FC1) : couleur secondaire — liens, icônes, éléments
+    interactifs, séparateurs.
+  • Gris (#6B6B6B) : textes courants, descriptions, contenus secondaires.
+  • Blanc (#FFFFFF) : fond principal, textes sur fonds colorés.
+
+------------------------------------------------------------------------
+5.3 Typographie
+------------------------------------------------------------------------
+
+  • Police principale : moderne, lisible, compatible web
+    (ex. : Poppins, Montserrat ou équivalent).
+  • Taille minimale du corps de texte : 16px.
+  • Hiérarchie visuelle claire entre titres (H1, H2, H3) et corps de texte.
+
+================================================================================
+6. EXIGENCES TECHNIQUES
+================================================================================
+
+------------------------------------------------------------------------
+6.1 Compatibilité et responsive design
+------------------------------------------------------------------------
+
+  • Le site doit être entièrement responsive (mobile, tablette, desktop).
+  • Compatible avec les navigateurs modernes : Chrome, Firefox, Safari, Edge.
+  • Temps de chargement optimisé (objectif : moins de 3 secondes sur
+    connexion standard).
+
+------------------------------------------------------------------------
+6.2 Technologie
+------------------------------------------------------------------------
+
+  • Framework recommandé : React.js ou équivalent moderne
+    (décision finale laissée à Antygravity).
+  • Formulaire de contact fonctionnel avec envoi d'email vers
+    info@ovaserviceplus.com.
+  • Intégration possible d'un système de gestion de contenu (CMS)
+    pour mises à jour autonomes.
+  • Hébergement sécurisé avec certificat SSL (HTTPS obligatoire).
+
+------------------------------------------------------------------------
+6.3 SEO et accessibilité
+------------------------------------------------------------------------
+
+  • Optimisation SEO de base : balises meta, titres structurés, URL propres.
+  • Textes alternatifs sur toutes les images.
+  • Structure sémantique HTML5 respectée.
+
+================================================================================
+7. INFORMATIONS DE CONTACT À INTÉGRER
+================================================================================
+
+  Email     : info@ovaserviceplus.com
+  Téléphone : À fournir par le client
+  Adresse   : Deuxième étage, immeuble blanc face école les champignons
+  Quartier  : Ntem-assi / Ngousso, Yaoundé 5e, Cameroun
+  Présence  : Cameroun / Canada (à préciser selon besoin)
+
+La page Contact devra inclure :
+
+  • Un formulaire de contact (nom, email, téléphone, objet, message).
+  • L'adresse physique avec intégration Google Maps si possible.
+  • L'email cliquable (mailto:) et le numéro de téléphone cliquable (tel:).
+
+================================================================================
+8. DÉLAIS ET LIVRABLES ATTENDUS
+================================================================================
+
+  +---------------------------------------+---------------+--------------------+
+  | Livrable                              | Délai estimé  | Remarques          |
+  +---------------------------------------+---------------+--------------------+
+  | Maquette graphique (wireframes)       | À définir     | Validation requise |
+  | Version beta du site                  | À définir     | Tests internes     |
+  | Mise en ligne officielle              | À définir     | Après validation   |
+  | Formation à la gestion du site        | À définir     | Si CMS intégré     |
+  +---------------------------------------+---------------+--------------------+
+
+================================================================================
+9. BUDGET ET CONDITIONS
+================================================================================
+
+Le budget alloué à ce projet sera défini conjointement avec Antygravity
+sur la base du présent cahier des charges.
+
+OVA Service Plus souhaite recevoir un devis détaillé incluant :
+
+  • Le coût de conception et développement du site.
+  • Les frais d'hébergement annuels et nom de domaine.
+  • La maintenance préventive et les mises à jour (tarif mensuel ou annuel).
+  • Toute option supplémentaire jugée pertinente par Antygravity.
+
+================================================================================
+10. VALIDATION ET SIGNATURE
+================================================================================
+
+Ce cahier des charges constitue le document de référence pour la réalisation
+du site web d'OVA Service Plus. Toute modification ultérieure devra faire
+l'objet d'un avenant signé par les deux parties.
+
+
+  Pour OVA Service Plus                    Pour Antygravity
+  ─────────────────────────────────        ─────────────────────────────────
+
+  Nom & Prénom : ___________________       Nom & Prénom : ___________________
+
+  Fonction     : ___________________       Fonction     : ___________________
+
+  Date         : ___________________       Date         : ___________________
+
+  Signature    :                           Signature    :
+
+
+
+
+  ___________________________              ___________________________
+
+
+================================================================================
+        OVA Service Plus — Pour un développement durable, conforme et efficace.
+                        Confidentiel — Document destiné à Antygravity
+================================================================================

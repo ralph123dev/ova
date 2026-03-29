@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Formation from './pages/services/Formation';
+import Accompagnement from './pages/services/Accompagnement';
+import EtudesImpact from './pages/services/EtudesImpact';
+import Realisations from './pages/Realisations';
+import Contact from './pages/Contact';
+import MentionsLegales from './pages/MentionsLegales';
+import './index.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="/services/formation" element={<Formation />} />
+          <Route path="/services/accompagnement" element={<Accompagnement />} />
+          <Route path="/services/etudes-impact" element={<EtudesImpact />} />
+          <Route path="/realisations" element={<Realisations />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+        </Routes>
+      </main>
+      <Footer />
+    </Router>
   );
 }
 
