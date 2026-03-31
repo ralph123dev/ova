@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* ===========================
-   CSS CUSTOM PROPERTIES
-   =========================== */
 :root {
   --blue-dark: #1A3A6B;
   --orange: #E87722;
@@ -22,9 +19,7 @@
   --transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
 }
 
-/* ===========================
-   RESET & BASE
-   =========================== */
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -42,6 +37,10 @@ body {
   background: var(--white);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+main {
+  padding-top: 80px;
 }
 
 a {

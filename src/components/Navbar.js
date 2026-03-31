@@ -23,6 +23,10 @@ export default function Navbar() {
 
   const isServicesActive = location.pathname.startsWith('/services');
 
+  const handleMobileMenuClick = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`} role="banner">
       <div className="container navbar__inner">
@@ -76,27 +80,43 @@ export default function Navbar() {
         <button
           className={`navbar__hamburger${menuOpen ? ' open' : ''}`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Ouvrir le menu"
+          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           aria-expanded={menuOpen}
         >
           <span /><span /><span />
         </button>
       </div>
 
+      {/* Mobile Menu Backdrop */}
+      {menuOpen && (
+        <div
+          className="navbar__backdrop"
+          onClick={handleMobileMenuClick}
+          aria-hidden="true"
+        />
+      )}
+
       {/* Mobile Menu */}
       <div className={`navbar__mobile${menuOpen ? ' open' : ''}`} role="dialog" aria-label="Menu mobile">
+        <button
+          className="navbar__mobile-close"
+          onClick={() => setMenuOpen(false)}
+          aria-label="Fermer le menu"
+        >
+          ✕
+        </button>
         <nav>
-          <NavLink to="/" className="navbar__mobile-link" end>Accueil</NavLink>
-          <NavLink to="/a-propos" className="navbar__mobile-link">À propos</NavLink>
+          <NavLink to="/" className="navbar__mobile-link" end onClick={handleMobileMenuClick}>Accueil</NavLink>
+          <NavLink to="/a-propos" className="navbar__mobile-link" onClick={handleMobileMenuClick}>À propos</NavLink>
           <div className="navbar__mobile-section">
             <span className="navbar__mobile-section-title">Nos Services</span>
-            <NavLink to="/services/formation" className="navbar__mobile-link navbar__mobile-link--sub">🎓 Formations</NavLink>
-            <NavLink to="/services/accompagnement" className="navbar__mobile-link navbar__mobile-link--sub">🤝 Accompagnement</NavLink>
-            <NavLink to="/services/etudes-impact" className="navbar__mobile-link navbar__mobile-link--sub">🌿 Études d'impact</NavLink>
+            <NavLink to="/services/formation" className="navbar__mobile-link navbar__mobile-link--sub" onClick={handleMobileMenuClick}>🎓 Formations</NavLink>
+            <NavLink to="/services/accompagnement" className="navbar__mobile-link navbar__mobile-link--sub" onClick={handleMobileMenuClick}>🤝 Accompagnement</NavLink>
+            <NavLink to="/services/etudes-impact" className="navbar__mobile-link navbar__mobile-link--sub" onClick={handleMobileMenuClick}>🌿 Études d'impact</NavLink>
           </div>
-          <NavLink to="/realisations" className="navbar__mobile-link">Réalisations</NavLink>
-          <NavLink to="/contact" className="navbar__mobile-link">Contact</NavLink>
-          <Link to="/contact" className="btn btn-primary" style={{ marginTop: '16px', display: 'block', textAlign: 'center' }}>
+          <NavLink to="/realisations" className="navbar__mobile-link" onClick={handleMobileMenuClick}>Réalisations</NavLink>
+          <NavLink to="/contact" className="navbar__mobile-link" onClick={handleMobileMenuClick}>Contact</NavLink>
+          <Link to="/contact" className="btn btn-primary" style={{ marginTop: '16px', display: 'block', textAlign: 'center' }} onClick={handleMobileMenuClick}>
             Nous contacter
           </Link>
         </nav>

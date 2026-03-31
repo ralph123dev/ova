@@ -70,6 +70,13 @@
   letter-spacing: 0.5px;
 }
 
+.badge-flag {
+  height: 20px;
+  width: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
 .home-hero__title {
   font-size: clamp(2.2rem, 5vw, 3.4rem);
   font-weight: 800;
@@ -425,11 +432,12 @@
 }
 
 /* ===================== RESPONSIVE ===================== */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
   .home-hero__content {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 40px;
+    gap: 48px;
+    padding-top: 30px;
   }
 
   .home-hero__subtitle,
@@ -440,6 +448,7 @@
 
   .home-hero__actions {
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .home-services__grid {
@@ -448,19 +457,121 @@
 
   .home-stats__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 
   .home-why__layout {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  .home-hero {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: 90vh;
+    padding-top: 60px;
+  }
+
+  .home-hero__title {
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 18px;
+  }
+
+  .home-hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .home-hero__content {
+    gap: 36px;
+    padding-bottom: 60px;
+  }
+
+  .home-services__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .home-why__layout {
+    gap: 32px;
+  }
+
+  .home-why__image {
+    order: -1;
+  }
 }
 
 @media (max-width: 560px) {
+  .home-hero {
+    min-height: 85vh;
+    padding-top: 50px;
+  }
+
   .home-hero__visual {
     display: none;
   }
+
+  .home-hero__content {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    gap: 24px;
+  }
+
+  .home-hero__title {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  }
+
+  .home-hero__subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .home-hero__actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .home-hero__actions .btn {
+    width: 100%;
+  }
+
   .home-stats__grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .home-services__grid {
+    gap: 16px;
+  }
+
+  .home-why__layout {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .home-hero__title {
+    font-size: 1.4rem;
+  }
+
+  .home-hero__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .home-hero__actions {
+    gap: 10px;
+  }
+
+  .home-hero__actions .btn {
+    padding: 11px 20px;
+    font-size: 0.85rem;
   }
 }

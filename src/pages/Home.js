@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import camerounImg from '../img/cameroun.webp';
+import canadaImg from '../img/canada.webp';
 import './Home.css';
 
 const services = [
@@ -60,12 +62,12 @@ export default function Home() {
         <div className="container home-hero__content">
           <div className="home-hero__text">
             <div className="home-hero__badge">
-              <span>🌍</span> Cameroun &amp; Canada
+              <img src={camerounImg} alt="Cameroun" className="badge-flag" />
+              <span>Cameroun &amp; Canada</span>
+              <img src={canadaImg} alt="Canada" className="badge-flag" />
             </div>
             <h1 className="home-hero__title">
-              Votre partenaire pour un<br />
-              <span className="home-hero__title-accent">développement durable</span><br />
-              et conforme
+              La solution à vos besoins
             </h1>
             <p className="home-hero__subtitle">
               OVA Service Plus accompagne entreprises et particuliers dans leurs projets à travers des formations, du conseil et des études d'impact environnemental.
@@ -123,7 +125,7 @@ export default function Home() {
               <h2 className="section-title" id="services-heading">Nos Expertises</h2>
               <div className="accent-line-center" />
               <p className="section-subtitle" style={{ margin: '0 auto' }}>
-                Trois domaines d'excellence pour accompagner vos projets de développement durable, de A à Z.
+                Conseil · Finance · Comptabilité · Gestion des Projets · Environnement · Bureautique · Formation
               </p>
             </div>
           </ScrollReveal>

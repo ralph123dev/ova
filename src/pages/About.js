@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import camerounImg from '../img/cameroun.webp';
+import canadaImg from '../img/canada.webp';
 import './About.css';
 
 const team = [
@@ -52,8 +54,14 @@ export default function About() {
                 Notre mission est d'aider nos clients à développer des projets durables, conformes aux exigences environnementales et pleinement adaptés aux réalités locales. Nous intervenons auprès d'entreprises privées, d'organisations publiques et de porteurs de projets individuels.
               </p>
               <div className="about-mission__tags">
-                <span className="about-tag">🌍 Cameroun</span>
-                <span className="about-tag">🌐 Canada</span>
+                <div className="country-tag">
+                  <img src={camerounImg} alt="Cameroun" />
+                  <span>Cameroun</span>
+                </div>
+                <div className="country-tag">
+                  <img src={canadaImg} alt="Canada" />
+                  <span>Canada</span>
+                </div>
                 <span className="about-tag">🌿 Développement durable</span>
               </div>
             </div>

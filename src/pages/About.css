@@ -22,6 +22,31 @@
   font-weight: 600;
 }
 
+.country-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: var(--bg-section);
+  color: var(--blue-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.country-tag:hover {
+  background: rgba(26, 58, 107, 0.15);
+  transform: translateY(-2px);
+}
+
+.country-tag img {
+  height: 16px;
+  width: auto;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
 .about-mission__visual {
   display: flex;
   flex-direction: column;
@@ -226,18 +251,65 @@
 }
 
 /* Responsive */
-@media (max-width: 960px) {
-  .about-mission,
-  .about-values__grid,
-  .about-team__grid {
-    grid-template-columns: 1fr 1fr;
+@media (max-width: 1024px) {
+  .about-mission {
+    grid-template-columns: 1fr;
+    gap: 48px;
   }
 
-  .about-timeline::before { display: none; }
+  .about-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .about-team__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .about-timeline::before {
+    display: none;
+  }
+
   .about-timeline__item,
   .about-timeline__item--right {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-mission {
+    gap: 36px;
+  }
+
+  .about-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .about-value {
+    padding: 24px 16px;
+  }
+
+  .about-mission__card {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+
+  .about-team__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .about-timeline__item {
+    margin-bottom: 24px;
+    gap: 16px;
+  }
+
+  .about-mission__visual {
+    gap: 12px;
   }
 }
 
@@ -246,5 +318,69 @@
   .about-values__grid,
   .about-team__grid {
     grid-template-columns: 1fr;
+  }
+
+  .about-values__grid {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .about-value {
+    padding: 20px 14px;
+  }
+
+  .about-value__icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .about-value h3 {
+    font-size: 0.95rem;
+  }
+
+  .about-value p {
+    font-size: 0.82rem;
+  }
+
+  .about-mission__card {
+    padding: 16px 14px;
+  }
+
+  .about-team__grid {
+    gap: 16px;
+  }
+
+  .about-timeline__item {
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .about-timeline__year {
+    width: 60px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .about-mission__card h3 {
+    font-size: 0.9rem;
+  }
+
+  .about-mission__card p {
+    font-size: 0.8rem;
+  }
+
+  .about-value {
+    padding: 16px 12px;
+  }
+
+  .about-value h3 {
+    font-size: 0.9rem;
+  }
+
+  .about-value p {
+    font-size: 0.78rem;
   }
 }

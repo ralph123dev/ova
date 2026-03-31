@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../img/logo.jpg';
+import camerounImg from '../img/cameroun.webp';
+import canadaImg from '../img/canada.webp';
 import './Footer.css';
 
 export default function Footer() {
@@ -17,8 +19,14 @@ export default function Footer() {
               Pour un développement durable, conforme et efficace.
             </p>
             <div className="footer__presence">
-              <span>📍 Cameroun</span>
-              <span>🌐 Canada</span>
+              <div className="country-badge">
+                <img src={camerounImg} alt="Cameroun" className="country-flag" />
+                <span>Cameroun</span>
+              </div>
+              <div className="country-badge">
+                <img src={canadaImg} alt="Canada" className="country-flag" />
+                <span>Canada</span>
+              </div>
             </div>
           </div>
 
@@ -49,14 +57,25 @@ export default function Footer() {
             <h3 className="footer__col-title">Contact</h3>
             <ul className="footer__contact-list">
               <li>
-                <span className="footer__contact-icon">✉️</span>
+                <span className="footer__contact-icon"><ion-icon name="mail-outline"></ion-icon></span>
                 <a href="mailto:info@ovaserviceplus.com">info@ovaserviceplus.com</a>
               </li>
               <li>
-                <span className="footer__contact-icon">📍</span>
+                <span className="footer__contact-icon"><ion-icon name="location-outline"></ion-icon></span>
                 <span>2e étage, immeuble blanc face école les champignons, Ntem-assi / Ngousso, Yaoundé 5e, Cameroun</span>
               </li>
             </ul>
+            <div className="footer__social">
+              <h4 className="footer__social-title">Suivez-nous</h4>
+              <div className="footer__social-links">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

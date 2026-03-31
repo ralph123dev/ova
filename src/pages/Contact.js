@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
+import camerounImg from '../img/cameroun.webp';
+import canadaImg from '../img/canada.webp';
 import './Contact.css';
 
 export default function Contact() {
@@ -49,7 +51,9 @@ export default function Contact() {
               <div className="accent-line" />
 
               <div className="contact-info__item">
-                <div className="contact-info__icon" style={{ background: 'rgba(26,58,107,0.1)', color: 'var(--blue-dark)' }}>✉️</div>
+                <div className="contact-info__icon" style={{ background: 'rgba(26,58,107,0.1)', color: 'var(--blue-dark)' }}>
+                  <ion-icon name="send-outline"></ion-icon>
+                </div>
                 <div>
                   <div className="contact-info__label">Email</div>
                   <a href="mailto:info@ovaserviceplus.com" className="contact-info__value" id="contact-email">
@@ -59,7 +63,9 @@ export default function Contact() {
               </div>
 
               <div className="contact-info__item">
-                <div className="contact-info__icon" style={{ background: 'rgba(232,119,34,0.1)', color: 'var(--orange)' }}>📞</div>
+                <div className="contact-info__icon" style={{ background: 'rgba(232,119,34,0.1)', color: 'var(--orange)' }}>
+                  <ion-icon name="call-outline"></ion-icon>
+                </div>
                 <div>
                   <div className="contact-info__label">Téléphone</div>
                   <a href="tel:+237000000000" className="contact-info__value" id="contact-phone">
@@ -69,7 +75,9 @@ export default function Contact() {
               </div>
 
               <div className="contact-info__item">
-                <div className="contact-info__icon" style={{ background: 'rgba(46,127,193,0.1)', color: 'var(--blue-sky)' }}>📍</div>
+                <div className="contact-info__icon" style={{ background: 'rgba(46,127,193,0.1)', color: 'var(--blue-sky)' }}>
+                  <ion-icon name="people-circle-outline"></ion-icon>
+                </div>
                 <div>
                   <div className="contact-info__label">Adresse</div>
                   <div className="contact-info__value" id="contact-address">
@@ -84,7 +92,17 @@ export default function Contact() {
                 <div className="contact-info__icon" style={{ background: 'rgba(26,58,107,0.08)', color: 'var(--blue-dark)' }}>🌐</div>
                 <div>
                   <div className="contact-info__label">Présence</div>
-                  <div className="contact-info__value">Cameroun · Canada</div>
+                  <div className="contact-info__value" style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <img src={camerounImg} alt="Cameroun" style={{ height: '20px', borderRadius: '4px' }} />
+                      <span>Cameroun</span>
+                    </div>
+                    <span>·</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                      <img src={canadaImg} alt="Canada" style={{ height: '20px', borderRadius: '4px' }} />
+                      <span>Canada</span>
+                    </div>
+                  </div>
                 </div>
               </div>
 

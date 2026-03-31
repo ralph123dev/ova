@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import camerounImg from '../img/cameroun.webp';
+import canadaImg from '../img/canada.webp';
 
 export default function MentionsLegales() {
   useEffect(() => {
@@ -30,7 +32,16 @@ export default function MentionsLegales() {
               <p style={{ marginBottom: '8px' }}><strong>Raison sociale :</strong> OVA Service Plus</p>
               <p style={{ marginBottom: '8px' }}><strong>Adresse :</strong> Deuxième étage, immeuble blanc face école les champignons, Ntem-assi / Ngousso, Yaoundé 5e, Cameroun</p>
               <p style={{ marginBottom: '8px' }}><strong>Email :</strong> <a href="mailto:info@ovaserviceplus.com" style={{ color: 'var(--blue-sky)' }}>info@ovaserviceplus.com</a></p>
-              <p style={{ marginBottom: '32px' }}><strong>Présence :</strong> Cameroun / Canada</p>
+              <p style={{ marginBottom: '32px' }}>
+                <strong>Présence :</strong>
+                <span style={{ display: 'inline-flex', gap: '8px', alignItems: 'center', marginLeft: '8px' }}>
+                  <img src={camerounImg} alt="Cameroun" style={{ height: '20px', borderRadius: '4px' }} />
+                  <span>Cameroun</span>
+                  <span>/</span>
+                  <img src={canadaImg} alt="Canada" style={{ height: '20px', borderRadius: '4px' }} />
+                  <span>Canada</span>
+                </span>
+              </p>
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>2. Prestataire de développement</h2>
               <div className="accent-line" />
