@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../img/logo.jpg';
 import camerounImg from '../img/cameroun.webp';
-import canadaImg from '../img/canada.webp';
 import './Footer.css';
 
 export default function Footer() {
@@ -23,10 +22,6 @@ export default function Footer() {
                 <img src={camerounImg} alt="Cameroun" className="country-flag" />
                 <span>Cameroun</span>
               </div>
-              <div className="country-badge">
-                <img src={canadaImg} alt="Canada" className="country-flag" />
-                <span>Canada</span>
-              </div>
             </div>
           </div>
 
@@ -37,6 +32,7 @@ export default function Footer() {
               <li><Link to="/services/formation">Formations professionnelles</Link></li>
               <li><Link to="/services/accompagnement">Accompagnement de projets</Link></li>
               <li><Link to="/services/etudes-impact">Études d'impact environnemental</Link></li>
+              <li><Link to="/services/immigration">Immigration & Mobilité</Link></li>
             </ul>
           </div>
 
@@ -58,7 +54,11 @@ export default function Footer() {
             <ul className="footer__contact-list">
               <li>
                 <span className="footer__contact-icon"><ion-icon name="mail-outline"></ion-icon></span>
-                <a href="mailto:info@ovaserviceplus.com">info@ovaserviceplus.com</a>
+                <a href="mailto:contact@ovaserviceplus.com">contact@ovaserviceplus.com</a>
+              </li>
+              <li>
+                <span className="footer__contact-icon"><ion-icon name="call-outline"></ion-icon></span>
+                <a href="tel:+237693330296">+237 693 330 296</a>
               </li>
               <li>
                 <span className="footer__contact-icon"><ion-icon name="location-outline"></ion-icon></span>
@@ -71,7 +71,7 @@ export default function Footer() {
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-                <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <a href="https://wa.me/237693330296" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
                   <ion-icon name="logo-whatsapp"></ion-icon>
                 </a>
               </div>

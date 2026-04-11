@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import camerounImg from '../img/cameroun.webp';
-import canadaImg from '../img/canada.webp';
 import './About.css';
 
 const team = [
@@ -15,7 +14,6 @@ const team = [
 const milestones = [
   { year: '2010', event: "Création d'OVA Service Plus au Cameroun" },
   { year: '2014', event: 'Lancement des programmes de formation certifiés' },
-  { year: '2018', event: 'Ouverture de la présence internationale (Canada)' },
   { year: '2021', event: "Expansion des études d'impact environnemental" },
   { year: '2024', event: 'Plus de 200 projets réalisés avec succès' },
 ];
@@ -57,10 +55,6 @@ export default function About() {
                 <div className="country-tag">
                   <img src={camerounImg} alt="Cameroun" />
                   <span>Cameroun</span>
-                </div>
-                <div className="country-tag">
-                  <img src={canadaImg} alt="Canada" />
-                  <span>Canada</span>
                 </div>
                 <span className="about-tag">🌿 Développement durable</span>
               </div>

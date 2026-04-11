@@ -63,6 +63,9 @@ export default function Navbar() {
               <Link to="/services/etudes-impact" className="navbar__dropdown-item" role="menuitem">
                 <span className="dropdown-icon">🌿</span> Études d'impact
               </Link>
+              <Link to="/services/immigration" className="navbar__dropdown-item" role="menuitem">
+                <span className="dropdown-icon">✈️</span> Immigration
+              </Link>
             </div>
           </div>
 
@@ -113,6 +116,7 @@ export default function Navbar() {
             <NavLink to="/services/formation" className="navbar__mobile-link navbar__mobile-link--sub" onClick={handleMobileMenuClick}>🎓 Formations</NavLink>
             <NavLink to="/services/accompagnement" className="navbar__mobile-link navbar__mobile-link--sub" onClick={handleMobileMenuClick}>🤝 Accompagnement</NavLink>
             <NavLink to="/services/etudes-impact" className="navbar__mobile-link navbar__mobile-link--sub" onClick={handleMobileMenuClick}>🌿 Études d'impact</NavLink>
+            <NavLink to="/services/immigration" className="navbar__mobile-link navbar__mobile-link--sub" onClick={handleMobileMenuClick}>✈️ Immigration</NavLink>
           </div>
           <NavLink to="/realisations" className="navbar__mobile-link" onClick={handleMobileMenuClick}>Réalisations</NavLink>
           <NavLink to="/contact" className="navbar__mobile-link" onClick={handleMobileMenuClick}>Contact</NavLink>

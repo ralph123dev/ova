@@ -1,12 +1,21 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import camerounImg from '../img/cameroun.webp';
+import accompagnementImg from '../img/accompagnement.webp';
+import etude_impactImg from '../img/etude_impact.jpg';
+import financeImg from '../img/finance.jpg';
+import comptabiliteImg from '../img/comptabilité.jpg';
+import gestion_projetImg from '../img/gestion_de_projet.jpg';
+import environnementImg from '../img/environnement.webp';
+import bureautiqueImg from '../img/bureautique.jpg';
+import formationImg from '../img/formation.jpg';
 import canadaImg from '../img/canada.webp';
 import './Home.css';
 
 const services = [
   {
+    image: formationImg,
     icon: '🎓',
     title: 'Formations',
     desc: "Programmes de formation adaptés aux professionnels et organisations sur l'environnement, le développement durable et le management de projet.",
@@ -14,17 +23,59 @@ const services = [
     color: 'blue',
   },
   {
-    icon: '🤝',
+    image: accompagnementImg,
     title: 'Accompagnement',
     desc: "Un suivi personnalisé à chaque étape du développement de votre projet : montage, conseil réglementaire et appui opérationnel.",
     link: '/services/accompagnement',
     color: 'orange',
   },
   {
-    icon: '🌿',
+    image: etude_impactImg,
     title: "Études d'impact",
     desc: "Réalisation d'études d'impact environnemental complètes, d'audits et de suivis de conformité conformes aux normes en vigueur.",
     link: '/services/etudes-impact',
+    color: 'sky',
+  },
+  {
+    image: financeImg,
+    title: 'Finance',
+    desc: "Conseil en gestion financière, analyse budgétaire et optimisation de la structure financière de vos projets et entreprises.",
+    link: '/services/finance',
+    color: 'blue',
+  },
+  {
+    image: comptabiliteImg,
+    title: 'Comptabilité',
+    desc: "Services comptables complets, tenue de comptes, audit financier et conseils en conformité réglementaire comptable.",
+    link: '/services/comptabilite',
+    color: 'orange',
+  },
+  {
+    image: gestion_projetImg,
+    title: 'Gestion de Projet',
+    desc: "Pilotage et gestion complète de projets, planning, risques et suivi opérationnel pour la réussite de vos initiatives.",
+    link: '/services/gestion-projet',
+    color: 'sky',
+  },
+  {
+    image: environnementImg,
+    title: 'Environnement',
+    desc: "Conseils en matière environnementale, plans d'action, audits éco-responsables et accompagnement vers la durabilité.",
+    link: '/services/environnement',
+    color: 'blue',
+  },
+  {
+    image: bureautiqueImg,
+    title: 'Bureautique',
+    desc: "Formation et assistance en bureautique, productivité digitale et outils collaboratifs pour optimiser votre performance.",
+    link: '/services/bureautique',
+    color: 'orange',
+  },
+  {
+    image: canadaImg,
+    title: 'Immigration',
+    desc: "Nous vous mettons en relation avec des professionnels agréés pour vos projets d'immigration au Canada, USA, Europe et ailleurs.",
+    link: '/services/immigration',
     color: 'sky',
   },
 ];
@@ -33,7 +84,7 @@ const stats = [
   { number: '10+', label: "Années d'expérience" },
   { number: '200+', label: 'Projets réalisés' },
   { number: '50+', label: 'Clients satisfaits' },
-  { number: '2', label: 'Pays de présence' },
+  { number: '1', label: 'Pays de présence' },
 ];
 
 const values = [
@@ -42,6 +93,31 @@ const values = [
   { icon: '🔍', title: 'Rigueur', desc: "Nos études et conseils s'appuient sur des analyses rigoureuses et des méthodes éprouvées." },
   { icon: '🤝', title: 'Proximité', desc: 'Nous construisons des relations de confiance durables avec nos clients et partenaires.' },
 ];
+
+const Counter = ({ end, duration = 2000 }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const endValue = parseInt(end.replace(/\D/g, ''));
+    if (isNaN(endValue)) return;
+    
+    const increment = endValue / (duration / 16);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= endValue) {
+        setCount(endValue);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, 16);
+    return () => clearInterval(timer);
+  }, [end, duration]);
+
+  const suffix = end.replace(/[0-9]/g, '');
+  return <>{count}{suffix}</>;
+};
 
 export default function Home() {
   const statsRef = useRef(null);
@@ -63,8 +139,7 @@ export default function Home() {
           <div className="home-hero__text">
             <div className="home-hero__badge">
               <img src={camerounImg} alt="Cameroun" className="badge-flag" />
-              <span>Cameroun &amp; Canada</span>
-              <img src={canadaImg} alt="Canada" className="badge-flag" />
+              <span>Cameroun</span>
             </div>
             <h1 className="home-hero__title">
               La solution à vos besoins
@@ -73,11 +148,11 @@ export default function Home() {
               OVA Service Plus accompagne entreprises et particuliers dans leurs projets à travers des formations, du conseil et des études d'impact environnemental.
             </p>
             <div className="home-hero__actions">
-              <Link to="/contact" className="btn btn-primary" id="hero-cta-contact">
-                Démarrer un projet →
-              </Link>
-              <Link to="/a-propos" className="btn btn-secondary" id="hero-cta-about">
+              <Link to="/a-propos" className="btn btn-primary" id="hero-cta-about">
                 Découvrir OVA
+              </Link>
+              <Link to="/contact" className="btn btn-secondary" id="hero-cta-contact">
+                Besoin d'expertise
               </Link>
             </div>
           </div>
@@ -109,7 +184,9 @@ export default function Home() {
           {stats.map((s, i) => (
             <ScrollReveal key={i} direction="up" delay={i * 100}>
               <div className="home-stats__item">
-                <div className="home-stats__number">{s.number}</div>
+                <div className="home-stats__number">
+                  <Counter end={s.number} />
+                </div>
                 <div className="home-stats__label">{s.label}</div>
               </div>
             </ScrollReveal>
@@ -133,7 +210,9 @@ export default function Home() {
             {services.map((s, i) => (
               <ScrollReveal key={i} direction="up" delay={i * 150}>
                 <div className={`home-service-card home-service-card--${s.color}`}>
-                  <div className="home-service-card__icon">{s.icon}</div>
+                  <div className="home-service-card__icon">
+                    <img src={s.image} alt={s.title} className="home-service-card__image" />
+                  </div>
                   <h3 className="home-service-card__title">{s.title}</h3>
                   <p className="home-service-card__desc">{s.desc}</p>
                   <Link to={s.link} className="home-service-card__link" id={`service-link-${i}`}>

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import camerounImg from '../img/cameroun.webp';
-import canadaImg from '../img/canada.webp';
 
 export default function MentionsLegales() {
   useEffect(() => {
@@ -31,15 +30,12 @@ export default function MentionsLegales() {
               <div className="accent-line" />
               <p style={{ marginBottom: '8px' }}><strong>Raison sociale :</strong> OVA Service Plus</p>
               <p style={{ marginBottom: '8px' }}><strong>Adresse :</strong> Deuxième étage, immeuble blanc face école les champignons, Ntem-assi / Ngousso, Yaoundé 5e, Cameroun</p>
-              <p style={{ marginBottom: '8px' }}><strong>Email :</strong> <a href="mailto:info@ovaserviceplus.com" style={{ color: 'var(--blue-sky)' }}>info@ovaserviceplus.com</a></p>
+              <p style={{ marginBottom: '8px' }}><strong>Email :</strong> <a href="mailto:ovaserviceplus@ovaserviceplus.com" style={{ color: 'var(--blue-sky)' }}>ovaserviceplus@ovaserviceplus.com</a></p>
               <p style={{ marginBottom: '32px' }}>
                 <strong>Présence :</strong>
                 <span style={{ display: 'inline-flex', gap: '8px', alignItems: 'center', marginLeft: '8px' }}>
                   <img src={camerounImg} alt="Cameroun" style={{ height: '20px', borderRadius: '4px' }} />
                   <span>Cameroun</span>
-                  <span>/</span>
-                  <img src={canadaImg} alt="Canada" style={{ height: '20px', borderRadius: '4px' }} />
-                  <span>Canada</span>
                 </span>
               </p>
 
@@ -54,7 +50,7 @@ export default function MentionsLegales() {
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>4. Protection des données personnelles</h2>
               <div className="accent-line" />
               <p style={{ marginBottom: '16px' }}>OVA Service Plus s'engage à protéger les données personnelles collectées via le formulaire de contact conformément aux législations en vigueur. Les informations recueillies sont exclusivement utilisées pour traiter votre demande et ne sont jamais transmises à des tiers.</p>
-              <p style={{ marginBottom: '32px' }}>Vous disposez d'un droit d'accès, de modification et de suppression de vos données en contactant : <a href="mailto:info@ovaserviceplus.com" style={{ color: 'var(--blue-sky)' }}>info@ovaserviceplus.com</a>.</p>
+              <p style={{ marginBottom: '32px' }}>Vous disposez d'un droit d'accès, de modification et de suppression de vos données en contactant : <a href="mailto:ovaserviceplus@ovaserviceplus.com" style={{ color: 'var(--blue-sky)' }}>ovaserviceplus@ovaserviceplus.com</a>.</p>
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>5. Hébergement</h2>
               <div className="accent-line" />

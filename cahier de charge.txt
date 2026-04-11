@@ -8,7 +8,7 @@
   Prestataire    : Antygravity
   Type de projet : Site web vitrine institutionnel
   Version        : 1.0 — Document initial
-  Contact        : info@ovaserviceplus.com
+  Contact        : ovaserviceplus@ovaserviceplus.com
 
 ================================================================================
 1. PRÉSENTATION DE L'ENTREPRISE
@@ -158,7 +158,7 @@ visuelle d'OVA Service Plus telle que définie par son logo officiel.
   • Framework recommandé : React.js ou équivalent moderne
     (décision finale laissée à Antygravity).
   • Formulaire de contact fonctionnel avec envoi d'email vers
-    info@ovaserviceplus.com.
+    ovaserviceplus@ovaserviceplus.com.
   • Intégration possible d'un système de gestion de contenu (CMS)
     pour mises à jour autonomes.
   • Hébergement sécurisé avec certificat SSL (HTTPS obligatoire).
@@ -175,7 +175,7 @@ visuelle d'OVA Service Plus telle que définie par son logo officiel.
 7. INFORMATIONS DE CONTACT À INTÉGRER
 ================================================================================
 
-  Email     : info@ovaserviceplus.com
+  Email     : ovaserviceplus@ovaserviceplus.com
   Téléphone : À fournir par le client
   Adresse   : Deuxième étage, immeuble blanc face école les champignons
   Quartier  : Ntem-assi / Ngousso, Yaoundé 5e, Cameroun

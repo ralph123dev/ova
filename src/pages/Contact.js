@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../components/ScrollReveal';
 import camerounImg from '../img/cameroun.webp';
-import canadaImg from '../img/canada.webp';
 import './Contact.css';
 
 export default function Contact() {
@@ -56,8 +55,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="contact-info__label">Email</div>
-                  <a href="mailto:info@ovaserviceplus.com" className="contact-info__value" id="contact-email">
-                    info@ovaserviceplus.com
+                  <a href="mailto:ovaserviceplus@ovaserviceplus.com" className="contact-info__value" id="contact-email">
+                    ovaserviceplus@ovaserviceplus.com
                   </a>
                 </div>
               </div>
@@ -68,8 +67,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="contact-info__label">Téléphone</div>
-                  <a href="tel:+237000000000" className="contact-info__value" id="contact-phone">
-                    À fournir par le client
+                  <a href="tel:+237693330296" className="contact-info__value" id="contact-phone">
+                    +237 693 330 296
                   </a>
                 </div>
               </div>
@@ -96,11 +95,6 @@ export default function Contact() {
                     <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                       <img src={camerounImg} alt="Cameroun" style={{ height: '20px', borderRadius: '4px' }} />
                       <span>Cameroun</span>
-                    </div>
-                    <span>·</span>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                      <img src={canadaImg} alt="Canada" style={{ height: '20px', borderRadius: '4px' }} />
-                      <span>Canada</span>
                     </div>
                   </div>
                 </div>
@@ -131,7 +125,7 @@ export default function Contact() {
                 <div className="contact-success" role="alert">
                   <div className="contact-success__icon">✅</div>
                   <h3>Message envoyé !</h3>
-                  <p>Merci pour votre message. Notre équipe vous répondra dans les plus brefs délais à <strong>{form.email}</strong>.</p>
+                  <p>Merci pour votre message. Notre équipe vous répondra dans les plus brefs délais.</p>
                   <button className="btn btn-outline" onClick={() => { setSubmitted(false); setForm({ nom: '', email: '', telephone: '', objet: '', message: '' }); }} style={{ marginTop: '16px' }}>
                     Envoyer un autre message
                   </button>
@@ -160,9 +154,11 @@ export default function Contact() {
                       <label htmlFor="contact-objet">Objet</label>
                       <select id="contact-objet" name="objet" value={form.objet} onChange={handleChange}>
                         <option value="">Sélectionnez un objet</option>
-                        <option value="formation">Demande de formation</option>
+                        <option value="formations">Demande de formation</option>
                         <option value="accompagnement">Accompagnement de projet</option>
                         <option value="eie">Étude d'impact environnemental</option>
+                        <option value="migrations">Migrations</option>
+                        <option value="immigration">Immigration</option>
                         <option value="devis">Demande de devis</option>
                         <option value="autre">Autre</option>
                       </select>

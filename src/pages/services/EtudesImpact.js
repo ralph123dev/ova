@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../../components/ScrollReveal';
+import etude_impactImg from '../../img/etude_impact.jpg';
 import '../ServicePage.css';
 
 const studies = [
@@ -76,7 +77,9 @@ export default function EtudesImpact() {
             </ScrollReveal>
             <ScrollReveal direction="right">
               <div className="service-intro__visual service-intro__visual--sky">
-                <div className="service-big-icon">🌿</div>
+                <div className="service-big-icon">
+                  <img src={etude_impactImg} alt="Études d'impact" className="service-intro__image" />
+                </div>
                 <div className="service-intro__stat"><strong>80+</strong><span>EIE réalisées</span></div>
                 <div className="service-intro__stat"><strong>100%</strong><span>Conformité légale</span></div>
               </div>

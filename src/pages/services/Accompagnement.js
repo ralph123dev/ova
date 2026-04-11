@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ScrollReveal from '../../components/ScrollReveal';
+import accompagnementImg from '../../img/accompagnement.webp';
 import '../ServicePage.css';
 
 const steps = [
@@ -59,7 +60,9 @@ export default function Accompagnement() {
             </ScrollReveal>
             <ScrollReveal direction="right">
               <div className="service-intro__visual service-intro__visual--orange">
-                <div className="service-big-icon">🤝</div>
+                <div className="service-big-icon">
+                  <img src={accompagnementImg} alt="Accompagnement" className="service-intro__image" />
+                </div>
                 <div className="service-intro__stat"><strong>100+</strong><span>Projets accompagnés</span></div>
                 <div className="service-intro__stat"><strong>95%</strong><span>Taux de satisfaction</span></div>
               </div>
