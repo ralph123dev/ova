@@ -19,7 +19,7 @@ const services = [
 
 export default function Comptabilite() {
   useEffect(() => {
-    document.title = 'Comptabilité — OVA Service Plus';
+    document.title = 'Comptabilité — APAD';
   }, []);
 
   return (

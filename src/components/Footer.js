@@ -13,9 +13,10 @@ export default function Footer() {
         <div className="container footer__grid">
           {/* Brand */}
           <div className="footer__brand">
-            <img src={logo} alt="OVA Service Plus" className="footer__logo" />
+            <img src={logo} alt="APAD" className="footer__logo" />
             <p className="footer__tagline">
               Pour un développement durable, conforme et efficace.
+              src/pages/Realisations.js	Titre
             </p>
             <div className="footer__presence">
               <div className="country-badge">
@@ -71,7 +72,7 @@ export default function Footer() {
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook">
                   <ion-icon name="logo-facebook"></ion-icon>
                 </a>
-                <a href="https://wa.me/237693330296" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
+                <a href="https://wa.me/237670875501" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
                   <ion-icon name="logo-whatsapp"></ion-icon>
                 </a>
               </div>
@@ -82,7 +83,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>© {currentYear} OVA Service Plus. Tous droits réservés.</p>
+          <p>© {currentYear} APAD — Association Pour les Actions Durables. Tous droits réservés.</p>
         </div>
       </div>
     </footer>

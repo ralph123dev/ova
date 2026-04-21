@@ -19,7 +19,7 @@ const services = [
 
 export default function Environnement() {
   useEffect(() => {
-    document.title = 'Environnement — OVA Service Plus';
+    document.title = 'Environnement — APAD';
   }, []);
 
   return (

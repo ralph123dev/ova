@@ -29,7 +29,7 @@ const modules = [
 
 export default function Formation() {
   useEffect(() => {
-    document.title = 'Formations — OVA Service Plus';
+    document.title = 'Formations — APAD';
   }, []);
 
   return (
@@ -56,7 +56,7 @@ export default function Formation() {
                 <h2 className="section-title">Développez vos compétences</h2>
                 <div className="accent-line" />
                 <p className="section-subtitle">
-                  OVA Service Plus propose des programmes de formation de haute qualité, animés par des experts reconnus. Nos formations combinent théorie et pratique pour un impact immédiat sur le terrain.
+                  APAD propose des programmes de formation de haute qualité, animés par des experts reconnus. Nos formations combinent théorie et pratique pour un impact immédiat sur le terrain.
                 </p>
                 <div className="service-intro__highlights">
                   {['Formateurs experts certifiés', 'Approche pédagogique participative', 'Contenu actualisé et adapté au contexte local', 'Attestation de formation délivrée'].map((item, i) => (

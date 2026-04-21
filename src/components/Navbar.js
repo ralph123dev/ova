@@ -31,8 +31,8 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? ' navbar--scrolled' : ''}`} role="banner">
       <div className="container navbar__inner">
         {/* Logo */}
-        <Link to="/" className="navbar__logo" aria-label="OVA Service Plus — Accueil">
-          <img src={logo} alt="OVA Service Plus" />
+        <Link to="/" className="navbar__logo" aria-label="APAD — Accueil">
+          <img src={logo} alt="APAD" />
         </Link>
 
         {/* Desktop Nav */}

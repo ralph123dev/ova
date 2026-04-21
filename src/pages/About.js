@@ -12,7 +12,7 @@ const team = [
 ];
 
 const milestones = [
-  { year: '2010', event: "Création d'OVA Service Plus au Cameroun" },
+  { year: '2010', event: "Création d'APAD au Cameroun" },
   { year: '2014', event: 'Lancement des programmes de formation certifiés' },
   { year: '2021', event: "Expansion des études d'impact environnemental" },
   { year: '2024', event: 'Plus de 200 projets réalisés avec succès' },
@@ -20,7 +20,7 @@ const milestones = [
 
 export default function About() {
   useEffect(() => {
-    document.title = 'À propos — OVA Service Plus';
+    document.title = 'À propos — APAD';
   }, []);
 
   return (
@@ -33,7 +33,7 @@ export default function About() {
             <span>›</span>
             <span>À propos</span>
           </div>
-          <h1>À propos d'OVA Service Plus</h1>
+          <h1>À propos d'APAD</h1>
           <p>Une entreprise engagée pour un développement durable, conforme et efficace.</p>
         </div>
       </section>
@@ -46,7 +46,7 @@ export default function About() {
               <h2 className="section-title" id="mission-heading">Notre Mission</h2>
               <div className="accent-line" />
               <p className="section-subtitle">
-                OVA Service Plus est une entreprise spécialisée dans l'accompagnement des entreprises et des particuliers à travers des services de formation, de conseil et de réalisation d'études d'impact environnemental.
+                APAD est une association spécialisée dans l'accompagnement des entreprises et des particuliers à travers des services de formation, de conseil et de réalisation d'études d'impact environnemental.
               </p>
               <p style={{ color: 'var(--gray)', lineHeight: 1.8, marginTop: '16px' }}>
                 Notre mission est d'aider nos clients à développer des projets durables, conformes aux exigences environnementales et pleinement adaptés aux réalités locales. Nous intervenons auprès d'entreprises privées, d'organisations publiques et de porteurs de projets individuels.

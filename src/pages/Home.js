@@ -123,7 +123,7 @@ export default function Home() {
   const statsRef = useRef(null);
 
   useEffect(() => {
-    document.title = "OVA Service Plus — Formation, Accompagnement & Études d'impact";
+    document.title = "APAD — Formation, Accompagnement & Études d'impact";
   }, []);
 
   return (
@@ -145,11 +145,11 @@ export default function Home() {
               La solution à vos besoins
             </h1>
             <p className="home-hero__subtitle">
-              OVA Service Plus accompagne entreprises et particuliers dans leurs projets à travers des formations, du conseil et des études d'impact environnemental.
+              APAD accompagne entreprises et particuliers dans leurs projets à travers des formations, du conseil et des études d'impact environnemental.
             </p>
             <div className="home-hero__actions">
               <Link to="/a-propos" className="btn btn-primary" id="hero-cta-about">
-                Découvrir OVA
+                Découvrir APAD
               </Link>
               <Link to="/contact" className="btn btn-secondary" id="hero-cta-contact">
                 Besoin d'expertise
@@ -231,7 +231,7 @@ export default function Home() {
           <div className="home-why__layout">
             <ScrollReveal direction="left">
               <div className="home-why__left">
-                <h2 className="section-title" id="values-heading">Pourquoi choisir OVA Service Plus ?</h2>
+                <h2 className="section-title" id="values-heading">Pourquoi choisir APAD ?</h2>
                 <div className="accent-line" />
                 <p className="section-subtitle">
                   Nous combinons expertise locale et standards internationaux pour offrir des solutions concrètes, durables et adaptées à votre réalité.

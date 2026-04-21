@@ -61,7 +61,7 @@ const colorMap = {
 
 export default function Realisations() {
   useEffect(() => {
-    document.title = 'Réalisations — OVA Service Plus';
+    document.title = 'Réalisations — APAD';
   }, []);
 
   return (

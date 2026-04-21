@@ -36,7 +36,7 @@ const sectors = [
 
 export default function EtudesImpact() {
   useEffect(() => {
-    document.title = "Études d'impact environnemental — OVA Service Plus";
+    document.title = "Études d'impact environnemental — APAD";
   }, []);
 
   return (
@@ -63,7 +63,7 @@ export default function EtudesImpact() {
                 <h2 className="section-title">Expertise environnementale certifiée</h2>
                 <div className="accent-line" />
                 <p className="section-subtitle">
-                  OVA Service Plus réalise des études d'impact environnemental de haute qualité, conformes aux exigences légales camerounaises et aux standards des bailleurs de fonds internationaux.
+                  APAD réalise des études d'impact environnemental de haute qualité, conformes aux exigences légales camerounaises et aux standards des bailleurs de fonds internationaux.
                 </p>
                 <div className="service-intro__highlights">
                   {['Conformité aux normes camerounaises et internationales', 'Experts accrédités en évaluation environnementale', 'Rapports acceptés par les autorités et bailleurs', 'Délais respectés et confidentialité garantie'].map((item, i) => (

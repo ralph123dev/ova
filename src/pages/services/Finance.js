@@ -19,7 +19,7 @@ const services = [
 
 export default function Finance() {
   useEffect(() => {
-    document.title = 'Finance — OVA Service Plus';
+    document.title = 'Finance — APAD';
   }, []);
 
   return (

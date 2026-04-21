@@ -19,7 +19,7 @@ const services = [
 
 export default function Bureautique() {
   useEffect(() => {
-    document.title = 'Bureautique — OVA Service Plus';
+    document.title = 'Bureautique — APAD';
   }, []);
 
   return (

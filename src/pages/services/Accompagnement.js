@@ -19,7 +19,7 @@ const services = [
 
 export default function Accompagnement() {
   useEffect(() => {
-    document.title = 'Accompagnement — OVA Service Plus';
+    document.title = 'Accompagnement — APAD';
   }, []);
 
   return (
@@ -46,7 +46,7 @@ export default function Accompagnement() {
                 <h2 className="section-title">Un soutien sur mesure</h2>
                 <div className="accent-line" />
                 <p className="section-subtitle">
-                  OVA Service Plus offre un accompagnement personnalisé et continu à chaque étape du développement de votre projet. De la conception à la réalisation, nous sommes à vos côtés.
+                  APAD offre un accompagnement personnalisé et continu à chaque étape du développement de votre projet. De la conception à la réalisation, nous sommes à vos côtés.
                 </p>
                 <div className="service-intro__highlights">
                   {['Approche centrée sur vos besoins spécifiques', 'Expertise locale et connaissance du terrain', 'Réseau de partenaires institutionnels', 'Suivi rigoureux et reporting régulier'].map((item, i) => (
