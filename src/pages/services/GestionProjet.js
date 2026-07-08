@@ -19,7 +19,7 @@ const services = [
 
 export default function GestionProjet() {
   useEffect(() => {
-    document.title = 'Gestion de Projet — APAD';
+    document.title = 'Gestion de Projet — APAD Environnement';
   }, []);
 
   return (

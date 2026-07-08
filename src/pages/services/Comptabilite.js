@@ -19,7 +19,7 @@ const services = [
 
 export default function Comptabilite() {
   useEffect(() => {
-    document.title = 'Comptabilité — APAD';
+    document.title = 'Comptabilité — APAD Environnement';
   }, []);
 
   return (

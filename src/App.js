@@ -12,9 +12,9 @@ import Comptabilite from './pages/services/Comptabilite';
 import GestionProjet from './pages/services/GestionProjet';
 import Environnement from './pages/services/Environnement';
 import Bureautique from './pages/services/Bureautique';
-import Immigration from './pages/services/Immigration';
 import Realisations from './pages/Realisations';
 import Contact from './pages/Contact';
+import Galerie from './pages/Galerie';
 import MentionsLegales from './pages/MentionsLegales';
 import './index.css';
 
@@ -34,7 +34,7 @@ function App() {
           <Route path="/services/gestion-projet" element={<GestionProjet />} />
           <Route path="/services/environnement" element={<Environnement />} />
           <Route path="/services/bureautique" element={<Bureautique />} />
-          <Route path="/services/immigration" element={<Immigration />} />
+          <Route path="/galerie" element={<Galerie />} />
           <Route path="/realisations" element={<Realisations />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />

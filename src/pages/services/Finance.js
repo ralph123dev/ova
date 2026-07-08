@@ -19,7 +19,7 @@ const services = [
 
 export default function Finance() {
   useEffect(() => {
-    document.title = 'Finance — APAD';
+    document.title = 'Finance — APAD Environnement';
   }, []);
 
   return (

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../img/logo.jpg';
-import camerounImg from '../img/cameroun.webp';
+import logo from '../img/logo.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -13,17 +12,10 @@ export default function Footer() {
         <div className="container footer__grid">
           {/* Brand */}
           <div className="footer__brand">
-            <img src={logo} alt="APAD" className="footer__logo" />
+            <img src={logo} alt="APAD Environnement" className="footer__logo" />
             <p className="footer__tagline">
-              Pour un développement durable, conforme et efficace.
-              src/pages/Realisations.js	Titre
+              APAD la solution est là !
             </p>
-            <div className="footer__presence">
-              <div className="country-badge">
-                <img src={camerounImg} alt="Cameroun" className="country-flag" />
-                <span>Cameroun</span>
-              </div>
-            </div>
           </div>
 
           {/* Services */}
@@ -33,7 +25,6 @@ export default function Footer() {
               <li><Link to="/services/formation">Formations professionnelles</Link></li>
               <li><Link to="/services/accompagnement">Accompagnement de projets</Link></li>
               <li><Link to="/services/etudes-impact">Études d'impact environnemental</Link></li>
-              <li><Link to="/services/immigration">Immigration & Mobilité</Link></li>
             </ul>
           </div>
 
@@ -43,6 +34,7 @@ export default function Footer() {
             <ul className="footer__links">
               <li><Link to="/">Accueil</Link></li>
               <li><Link to="/a-propos">À propos</Link></li>
+              <li><Link to="/galerie">Galerie</Link></li>
               <li><Link to="/realisations">Réalisations</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/mentions-legales">Mentions légales</Link></li>
@@ -55,11 +47,11 @@ export default function Footer() {
             <ul className="footer__contact-list">
               <li>
                 <span className="footer__contact-icon"><ion-icon name="mail-outline"></ion-icon></span>
-                <a href="mailto:contact@ovaserviceplus.com">contact@ovaserviceplus.com</a>
+                <a href="mailto:contact@apasite.com">contact@apasite.com</a>
               </li>
               <li>
                 <span className="footer__contact-icon"><ion-icon name="call-outline"></ion-icon></span>
-                <a href="tel:+237693330296">+237 693 330 296</a>
+                <a href="tel:+237670875501">+237 670 875 501</a>
               </li>
               <li>
                 <span className="footer__contact-icon"><ion-icon name="location-outline"></ion-icon></span>
@@ -83,7 +75,7 @@ export default function Footer() {
 
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <p>© {currentYear} APAD — Association Pour les Actions Durables. Tous droits réservés.</p>
+          <p>APAD la solution est là !</p>
         </div>
       </div>
     </footer>

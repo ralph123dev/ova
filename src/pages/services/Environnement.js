@@ -19,7 +19,7 @@ const services = [
 
 export default function Environnement() {
   useEffect(() => {
-    document.title = 'Environnement — APAD';
+    document.title = 'Environnement — APAD Environnement';
   }, []);
 
   return (

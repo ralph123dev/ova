@@ -18,7 +18,7 @@ const destinations = [
 
 export default function Immigration() {
   useEffect(() => {
-    document.title = "Immigration & Mobilité Internationale — APAD";
+    document.title = "Immigration & Mobilité Internationale — APAD Environnement";
   }, []);
 
   return (

@@ -4,7 +4,7 @@ import camerounImg from '../img/cameroun.webp';
 
 export default function MentionsLegales() {
   useEffect(() => {
-    document.title = 'Mentions légales — APAD';
+    document.title = 'Mentions légales — APAD Environnement';
   }, []);
 
   return (
@@ -17,7 +17,7 @@ export default function MentionsLegales() {
             <span>Mentions légales</span>
           </div>
           <h1>Mentions Légales</h1>
-          <p>Informations légales relatives au site web d'APAD.</p>
+          <p>Informations légales relatives au site web d'APAD Environnement.</p>
         </div>
       </section>
 
@@ -28,9 +28,9 @@ export default function MentionsLegales() {
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>1. Éditeur du site</h2>
               <div className="accent-line" />
-              <p style={{ marginBottom: '8px' }}><strong>Raison sociale :</strong> APAD — Association Pour les Actions Durables</p>
+              <p style={{ marginBottom: '8px' }}><strong>Raison sociale :</strong> APAD Environnement — Association Pour les Actions Durables</p>
               <p style={{ marginBottom: '8px' }}><strong>Adresse :</strong> Deuxième étage, immeuble blanc face école les champignons, Ntem-assi / Ngousso, Yaoundé 5e, Cameroun</p>
-              <p style={{ marginBottom: '8px' }}><strong>Email :</strong> <a href="mailto:ovaserviceplus@ovaserviceplus.com" style={{ color: 'var(--blue-sky)' }}>ovaserviceplus@ovaserviceplus.com</a></p>
+              <p style={{ marginBottom: '8px' }}><strong>Email :</strong> <a href="mailto:contact@apasite.com" style={{ color: 'var(--blue-sky)' }}>contact@apasite.com</a></p>
               <p style={{ marginBottom: '32px' }}>
                 <strong>Présence :</strong>
                 <span style={{ display: 'inline-flex', gap: '8px', alignItems: 'center', marginLeft: '8px' }}>
@@ -41,16 +41,16 @@ export default function MentionsLegales() {
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>2. Prestataire de développement</h2>
               <div className="accent-line" />
-              <p style={{ marginBottom: '32px' }}>Ce site a été développé par <strong>Antygravity</strong>, prestataire désigné par APAD.</p>
+              <p style={{ marginBottom: '32px' }}>Ce site a été développé par <strong>Antygravity</strong>, prestataire désigné par APAD Environnement.</p>
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>3. Propriété intellectuelle</h2>
               <div className="accent-line" />
-              <p style={{ marginBottom: '32px' }}>L'ensemble des contenus présents sur ce site (textes, images, logos, graphismes) est la propriété exclusive d'APAD ou de ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.</p>
+              <p style={{ marginBottom: '32px' }}>L'ensemble des contenus présents sur ce site (textes, images, logos, graphismes) est la propriété exclusive d'APAD Environnement ou de ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation préalable écrite.</p>
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>4. Protection des données personnelles</h2>
               <div className="accent-line" />
-              <p style={{ marginBottom: '16px' }}>APAD s'engage à protéger les données personnelles collectées via le formulaire de contact conformément aux législations en vigueur. Les informations recueillies sont exclusivement utilisées pour traiter votre demande et ne sont jamais transmises à des tiers.</p>
-              <p style={{ marginBottom: '32px' }}>Vous disposez d'un droit d'accès, de modification et de suppression de vos données en contactant : <a href="mailto:ovaserviceplus@ovaserviceplus.com" style={{ color: 'var(--blue-sky)' }}>ovaserviceplus@ovaserviceplus.com</a>.</p>
+              <p style={{ marginBottom: '16px' }}>APAD Environnement s'engage à protéger les données personnelles collectées via le formulaire de contact conformément aux législations en vigueur. Les informations recueillies sont exclusivement utilisées pour traiter votre demande et ne sont jamais transmises à des tiers.</p>
+              <p style={{ marginBottom: '32px' }}>Vous disposez d'un droit d'accès, de modification et de suppression de vos données en contactant : <a href="mailto:contact@apasite.com" style={{ color: 'var(--blue-sky)' }}>contact@apasite.com</a>.</p>
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>5. Hébergement</h2>
               <div className="accent-line" />
@@ -58,7 +58,7 @@ export default function MentionsLegales() {
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>6. Responsabilité</h2>
               <div className="accent-line" />
-              <p style={{ marginBottom: '32px' }}>APAD s'efforce de maintenir les informations de ce site à jour et exactes. Toutefois, l'association ne saurait être tenue responsable des erreurs ou omissions dans les informations diffusées, ni des dommages résultant de l'utilisation du site.</p>
+              <p style={{ marginBottom: '32px' }}>APAD Environnement s'efforce de maintenir les informations de ce site à jour et exactes. Toutefois, l'association ne saurait être tenue responsable des erreurs ou omissions dans les informations diffusées, ni des dommages résultant de l'utilisation du site.</p>
 
               <h2 style={{ color: 'var(--blue-dark)', marginBottom: '8px', fontSize: '1.3rem' }}>7. Cookies</h2>
               <div className="accent-line" />

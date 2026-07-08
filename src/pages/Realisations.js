@@ -61,7 +61,7 @@ const colorMap = {
 
 export default function Realisations() {
   useEffect(() => {
-    document.title = 'Réalisations — APAD';
+    document.title = 'Réalisations — APAD Environnement';
   }, []);
 
   return (

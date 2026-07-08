@@ -6,11 +6,12 @@ import './Contact.css';
 
 export default function Contact() {
   useEffect(() => {
-    document.title = 'Contact — APAD';
+    document.title = 'Contact — APAD Environnement';
   }, []);
 
   const [form, setForm] = useState({ nom: '', email: '', telephone: '', objet: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
 
   const handleChange = (e) => {
@@ -18,13 +19,43 @@ export default function Contact() {
     setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    
     if (!form.nom || !form.email || !form.message) {
       setError('Veuillez remplir tous les champs obligatoires.');
       return;
     }
-    setSubmitted(true);
+
+    setSubmitting(true);
+    setError('');
+
+    try {
+      const response = await fetch('https://formspree.io/f/xrerdlrk', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setForm({ nom: '', email: '', telephone: '', objet: '', message: '' });
+      } else {
+        const data = await response.json();
+        if (Object.hasOwn(data, 'errors')) {
+          setError(data.errors.map(error => error.message).join(", "));
+        } else {
+          setError("Oups ! Un problème est survenu lors de l'envoi de votre message.");
+        }
+      }
+    } catch (err) {
+      setError("Oups ! Un problème est survenu lors de l'envoi de votre message.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -55,8 +86,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="contact-info__label">Email</div>
-                  <a href="mailto:ovaserviceplus@ovaserviceplus.com" className="contact-info__value" id="contact-email">
-                    ovaserviceplus@ovaserviceplus.com
+                  <a href="mailto:contact@apasite.com" className="contact-info__value" id="contact-email">
+                    contact@apasite.com
                   </a>
                 </div>
               </div>
@@ -67,8 +98,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="contact-info__label">Téléphone</div>
-                  <a href="tel:+237693330296" className="contact-info__value" id="contact-phone">
-                    +237 693 330 296
+                  <a href="tel:+237670875501" className="contact-info__value" id="contact-phone">
+                    +237 670 875 501
                   </a>
                 </div>
               </div>
@@ -102,7 +133,7 @@ export default function Contact() {
 
               <div className="contact-map">
                 <iframe
-                  title="APAD - Localisation Yaoundé"
+                  title="APAD Environnement - Localisation Yaoundé"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15927.43870986432!2d11.5071!3d3.8667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf7a309a7f0f%3A0x7e1a2e2e697f5a67!2sNgousso%2C%20Yaound%C3%A9%2C%20Cameroon!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
                   width="100%"
                   height="200"
@@ -137,28 +168,27 @@ export default function Contact() {
                   <div className="contact-form__row">
                     <div className="contact-form__field">
                       <label htmlFor="contact-nom">Nom complet <span aria-hidden="true">*</span></label>
-                      <input id="contact-nom" type="text" name="nom" value={form.nom} onChange={handleChange} placeholder="Votre nom et prénom" required autoComplete="name" />
+                      <input id="contact-nom" type="text" name="nom" value={form.nom} onChange={handleChange} placeholder="Votre nom et prénom" required autoComplete="name" disabled={submitting} />
                     </div>
                     <div className="contact-form__field">
                       <label htmlFor="contact-email-field">Email <span aria-hidden="true">*</span></label>
-                      <input id="contact-email-field" type="email" name="email" value={form.email} onChange={handleChange} placeholder="votre@email.com" required autoComplete="email" />
+                      <input id="contact-email-field" type="email" name="email" value={form.email} onChange={handleChange} placeholder="votre@email.com" required autoComplete="email" disabled={submitting} />
                     </div>
                   </div>
 
                   <div className="contact-form__row">
                     <div className="contact-form__field">
                       <label htmlFor="contact-telephone">Téléphone</label>
-                      <input id="contact-telephone" type="tel" name="telephone" value={form.telephone} onChange={handleChange} placeholder="+237 000 000 000" autoComplete="tel" />
+                      <input id="contact-telephone" type="tel" name="telephone" value={form.telephone} onChange={handleChange} placeholder="+237 000 000 000" autoComplete="tel" disabled={submitting} />
                     </div>
                     <div className="contact-form__field">
                       <label htmlFor="contact-objet">Objet</label>
-                      <select id="contact-objet" name="objet" value={form.objet} onChange={handleChange}>
+                      <select id="contact-objet" name="objet" value={form.objet} onChange={handleChange} disabled={submitting}>
                         <option value="">Sélectionnez un objet</option>
                         <option value="formations">Demande de formation</option>
                         <option value="accompagnement">Accompagnement de projet</option>
                         <option value="eie">Étude d'impact environnemental</option>
                         <option value="migrations">Migrations</option>
-                        <option value="immigration">Immigration</option>
                         <option value="devis">Demande de devis</option>
                         <option value="autre">Autre</option>
                       </select>
@@ -167,11 +197,11 @@ export default function Contact() {
 
                   <div className="contact-form__field">
                     <label htmlFor="contact-message">Message <span aria-hidden="true">*</span></label>
-                    <textarea id="contact-message" name="message" value={form.message} onChange={handleChange} placeholder="Décrivez votre projet ou votre demande..." rows="6" required />
+                    <textarea id="contact-message" name="message" value={form.message} onChange={handleChange} placeholder="Décrivez votre projet ou votre demande..." rows="6" required disabled={submitting} />
                   </div>
 
-                  <button type="submit" className="btn btn-primary" id="contact-submit" style={{ width: '100%', justifyContent: 'center' }}>
-                    Envoyer le message →
+                  <button type="submit" className="btn btn-primary" id="contact-submit" style={{ width: '100%', justifyContent: 'center' }} disabled={submitting}>
+                    {submitting ? 'Envoi en cours...' : 'Envoyer le message →'}
                   </button>
                   <p style={{ fontSize: '0.8rem', color: 'var(--gray)', marginTop: '12px', textAlign: 'center' }}>
                     * Champs obligatoires. Vos données sont traitées de manière confidentielle.

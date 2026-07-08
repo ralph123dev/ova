@@ -19,7 +19,7 @@ const services = [
 
 export default function Bureautique() {
   useEffect(() => {
-    document.title = 'Bureautique — APAD';
+    document.title = 'Bureautique — APAD Environnement';
   }, []);
 
   return (
