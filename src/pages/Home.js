@@ -73,6 +73,7 @@ const services = [
 ];
 
 const stats = [
+  { number: '3', label: "Années d'expérience" },
   { number: '200+', label: 'Projets réalisés' },
   { number: '600', label: 'Clients satisfaits' },
 ];
@@ -127,10 +128,6 @@ export default function Home() {
         </div>
         <div className="container home-hero__content">
           <div className="home-hero__text">
-            <div className="home-hero__badge">
-              <img src={camerounImg} alt="Cameroun" className="badge-flag" />
-              <span>Cameroun</span>
-            </div>
             <h1 className="home-hero__title">
               La solution à vos besoins
             </h1>
